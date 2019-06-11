@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'futura';
+    src: url('/fonts/futura.ttf');
+}
+
+$futura: 'futura', Helvetica, sans-serif;
+$quicksand: 'Quicksand', sans-serif;
+
+/** FONT MIXINS **/
+@mixin standard-font() {
+    font-family: $quicksand;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+    -webkit-font-smoothing: antialiased;
+}
+
+@mixin futura() {
+    font-family: $futura;
+    font-style: normal;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+@mixin title-font() {
+    font-family: $futura;
+    font-style: normal;
+    font-weight: 600;
+    // letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    
+    position: relative;
+    paint-order: stroke fill;
+    
+    background: $yellow;
+    -webkit-text-stroke: 1px $black;
+
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+
+/** TYPE PATTERNS **/
+@mixin quiet-voice() {
+    font-size: 8px;
+}
+
+@mixin standard-voice() {
+    @include standard-font();
+    font-size: 16px; // please just use pxs.
+    line-height: 1.4; // no units on line-height
+    letter-spacing: 0.02em; // ems for letter-spacing 'kearning'
+    font-weight: 400; // no 'normal' and 'bold' - make sure your font supports this - or the browser will try and fake it - and it'll cause troubles for you
+}
+
+@mixin strong-voice() {
+    @include standard-font();
+    font-size: 25px;
+    @include bp(1) {
+        font-size: 30px
+    }
+}
+
+@mixin loud-voice() {
+    @include title-font();
+    font-size: 30px;
+    @include bp(1) {
+        font-size: 40px
+    }
+}
+
