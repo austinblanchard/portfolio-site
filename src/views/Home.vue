@@ -16,7 +16,7 @@ import Contact from '@/components/Contact.vue'
 
 
 export default {
-    // name: 'home',
+    name: 'home',
     components: {
         Header,
         About,

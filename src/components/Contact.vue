@@ -111,28 +111,12 @@ section {
 
 .link {
     @include standard-button();
+    margin-top: $pad;
+    display: inline-block;
     color: $yellow;
 
-    margin-top: $pad;
-
-    display: inline-block;
-    position: relative;
-
     &:after {
-        position: absolute;
-        content: '';
-        height: 2px;
         background: $yellow;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        bottom: -5px;
-        width: 30%;
-        transition: all 200ms ease;
-    }
-        
-    &:hover:after {
-        width: 50%;
     }
 }
 
