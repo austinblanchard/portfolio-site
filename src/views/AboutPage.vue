@@ -1,7 +1,7 @@
 <template>
     <div class="about-page">
         <Header/>
-        <About/>
+        <About :hide-link="true" :show-text="true"/>
     </div>
 </template>
 
@@ -11,7 +11,7 @@ import Header from '@/components/Header.vue'
 import About from '@/components/About.vue'
 
 export default {
-    name: 'home',
+    name: 'about-page',
     components: {
         Header,
         About
