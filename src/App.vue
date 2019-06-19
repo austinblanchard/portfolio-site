@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import './compiled-icons'
 import Home from './views/Home.vue'
 // import Header from './components/Header.vue'
 // import About from './components/About.vue'

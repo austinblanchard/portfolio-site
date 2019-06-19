@@ -21,7 +21,9 @@
             <div class="logos-container">
 
                 <div class="logo">
-                    <svgicon icon="fox-logo" />
+                    <router-link :to="{ name: 'project', params: { projectSlug: 'fox' }}">
+                        <svgicon icon="fox-logo" />
+                    </router-link>
                 </div>
                 <div class="logo">
                     <svgicon class="universal" icon="universal" />
@@ -56,7 +58,7 @@
 </template>
 
 <script>
-import '../compiled-icons';
+// import '../compiled-icons';
 
 // import 'swiper/dist/css/swiper.css'
 // import { swiper, swiperSlide } from 'vue-awesome-swiper'

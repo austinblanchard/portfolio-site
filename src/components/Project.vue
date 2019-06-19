@@ -1,11 +1,13 @@
 <template>
-    <section id="work-detail">
-        work detail
+    <section id="project-detail">
+        <p>text {{ $route.params.projectSlug }}</p>
+        <!-- <img src="{{ $route.params.desktopImage }}" alt=""> -->
     </section>
     
 </template>
 
 <script>
+// import '../projects.json';
 export default {
 //   name: 'HelloWorld',
 //   props: {

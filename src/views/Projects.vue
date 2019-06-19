@@ -1,5 +1,6 @@
 <template>
     <div class="work-page">
+        test
         <Project/>
     </div>
 </template>
@@ -9,7 +10,7 @@
 import Project from '@/components/Project.vue'
 
 export default {
-    name: 'work-page',
+    name: 'projects',
     components: {
         Project
     }
