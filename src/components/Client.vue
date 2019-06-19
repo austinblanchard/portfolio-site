@@ -1,6 +1,6 @@
 <template>
-    <section id="project-detail">
-        <p>text {{ $route.params.projectSlug }}</p>
+    <section id="client-detail">
+        <p>text {{ $route.params.clientSlug }}</p>
         <!-- <img src="{{ $route.params.desktopImage }}" alt=""> -->
     </section>
     

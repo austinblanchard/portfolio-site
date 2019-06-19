@@ -1,18 +1,18 @@
 <template>
     <div class="work-page">
         test
-        <Project/>
+        <Client/>
     </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Project from '@/components/Project.vue'
+import Client from '@/components/Client.vue'
 
 export default {
-    name: 'projects',
+    name: 'work-page',
     components: {
-        Project
+        Client
     }
 }
 
