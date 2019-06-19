@@ -11,23 +11,24 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home
+        path: '/',
+        name: 'home',
+        component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/AboutPage.vue')
+        path: '/about',
+        name: 'about',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "about" */ './views/AboutPage.vue')
     },
     {
-      path: '/work/:clientSlug',
-      name: 'client',
-    //   component: Projects
-      component: () => import(/* webpackChunkName: "work" */ './views/WorkPage.vue')
+        // path: '/work/:clientSlug', if later need a work page
+        path: '/:clientSlug',
+        name: 'client',
+        // component: Projects
+        component: () => import(/* webpackChunkName: "about" */ './views/WorkPage.vue')
     }
   ]
 })
