@@ -1,7 +1,7 @@
 <template>
   <div id="app">
       <nav class="nav" :class="{ 'open': nav_is_open }">
-            <div class="nav-socials">
+            <div class="nav-socials" :class="{ 'light': lightIcons }">
                 <a href="https://www.linkedin.com/in/austinblanchard" target="_blank"><svgicon icon="linkedin" /></a>
                 <a href="https://github.com/austinblanchard" target="_blank"><svgicon icon="github-circle" /></a>
                 <a href="mailto:austinpdx@gmail.com" target="_blank"><svgicon class="email" icon="email-outline" /></a>
@@ -51,6 +51,7 @@ export default {
     data() {
         return {
             nav_is_open: false,
+            lightIcons: false,
 
             audios: [
                 {
@@ -157,6 +158,13 @@ html {
             @include bp(3) {
                 height: 39px;
             }
+        }
+    }
+
+    &.light {
+        // 
+        svg {
+            color: $white;
         }
     }
 }
