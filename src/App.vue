@@ -8,7 +8,7 @@
             </div>
         </nav>
 
-        <div class="sound" @click.prevent="audio.isPlaying ? pause(audio) : play(audio)" v-for="audio in audios" :key="audio.id">
+        <div class="sound" :class="{ 'light': lightIcons }" @click.prevent="audio.isPlaying ? pause(audio) : play(audio)" v-for="audio in audios" :key="audio.id">
             <img src="./assets/victrola.png" alt="play music">
             <div class="notes-wrapper" :class="{ 'playing': audio.isPlaying }">
                 <div class="note one">&#9834;</div>
@@ -27,7 +27,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
-    <router-view/>
+    <router-view @message="setIcons" />
   </div>
 </template>
 
@@ -73,6 +73,10 @@ export default {
         pause (audio) {
             audio.isPlaying = false;
             audio.file.pause();
+        },
+
+        setIcons(bool) {
+            this.lightIcons = bool;
         }
     },
 
@@ -92,7 +96,7 @@ export default {
 @import "./sass/_breakpoints.scss";
 
 html {
-    background-color: #2196C1;
+    background-color: $bg-blue;
 }
 
 #app {
@@ -184,6 +188,10 @@ html {
         top: $pad*3;
         left: $pad*3;
         height: 50px;
+    }
+
+    &.light .note {
+        color: $white;
     }
 
     &:hover {

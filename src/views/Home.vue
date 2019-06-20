@@ -22,6 +22,16 @@ export default {
         About,
         Work,
         Contact
+    },
+
+    methods: {
+        changeIcons() {
+            this.$emit("message", false);
+        }
+    },
+
+    beforeMount() {
+        this.changeIcons();
     }
 }
 </script>

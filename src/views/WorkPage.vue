@@ -15,6 +15,16 @@ export default {
     components: {
         ClientHeader,
         Client
+    },
+
+    methods: {
+        changeIcons() {
+            this.$emit("message", true);
+        }
+    },
+
+    beforeMount() {
+        this.changeIcons();
     }
 }
 
