@@ -1,10 +1,11 @@
 @font-face {
     font-family: 'futura';
-    src: url('/fonts/futura.ttf');
+    src: url('/fonts/futura.ttf') format('truetype');
 }
 
 $futura: 'futura', Helvetica, sans-serif;
 $quicksand: 'Quicksand', sans-serif;
+// $neon: 'neon', serif;
 
 /** FONT MIXINS **/
 @mixin standard-font() {
@@ -41,10 +42,10 @@ $quicksand: 'Quicksand', sans-serif;
 }
 
 @mixin project-title() {
-    font-family: $quicksand;
+    // font-family: $neon;
     text-transform: uppercase;
     font-style: normal;
-    font-weight: 500;
+    // font-weight: 500;
     font-size: 26px;
     -webkit-font-smoothing: antialiased;
 

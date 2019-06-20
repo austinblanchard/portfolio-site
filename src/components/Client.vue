@@ -2,8 +2,20 @@
     <section id="client-detail">
 
         <div class="container">
-            <h2>Fox Movies</h2>
-            <p>Services: Front-end development</p>
+            <!-- add loop -->
+            <div class="project">
+                <div class="project-details">
+                    <h2>Fox Movies</h2>
+                    <p>Services: Custom Themes</p>
+                </div>
+
+                <div class="preview">
+                    <div class="preview-container">
+                        <img src="../assets/dark-phoenix-desktop.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            
         </div>
 
 
@@ -53,6 +65,23 @@ section {
 .container {
     max-width: 900px;
     margin: 0 auto;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+
+    @include bp(2) {
+        flex-direction: row;
+    }
+}
+
+.project-details {
+    width: 100%;
+
+    @include bp(2) {
+        width: 50%;
+    }
 
     h2 {
         @include project-title();
@@ -62,6 +91,33 @@ section {
         @include standard-font();
         margin-top: $pad*2;
         color: $white;
+    }
+}
+
+.preview {
+    width: 100%;
+    margin-top: $pad*2;
+
+    @include bp(2) {
+        width: 50%;
+        margin-top: 0;
+    }
+}
+
+.preview-container {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid $white;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 250px;
+
+    @include bp(2) {
+        height: 300px;
+    }
+
+    img {
+        width: 100%;
     }
 }
 
