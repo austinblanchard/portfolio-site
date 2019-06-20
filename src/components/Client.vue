@@ -1,6 +1,14 @@
 <template>
     <section id="client-detail">
-        <p>text {{ $route.params.clientSlug }}</p>
+
+        <div class="container">
+            <h2>Fox Movies</h2>
+            <p>Services: Front-end development</p>
+        </div>
+
+
+
+        <!-- <p>text {{ $route.params.clientSlug }}</p> -->
         <!-- <img src="{{ $route.params.desktopImage }}" alt=""> -->
     </section>
     
@@ -25,21 +33,36 @@ export default {
 @import "../sass/_breakpoints.scss";
 
 section {
-    
-
     padding: $pad*10 $pad*2;
 
-    @include bp(2) {
-        padding: $pad*18 $pad*2;
+    background: url('../assets/wall.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0px 0px 96px 19px rgba(0,0,0,1);
+
+    @include bp(1) {
+        padding: $pad*10 $pad*4;
     }
 
+    @include bp(2) {
+        padding: $pad*18 $pad*10;
+    }
 }
 
 .container {
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
 
-    text-align: center;
+    h2 {
+        @include project-title();
+    }
+
+    p {
+        @include standard-font();
+        margin-top: $pad*2;
+        color: $white;
+    }
 }
 
 
