@@ -1,7 +1,7 @@
 /* eslint-disable */
 require('./dreamworks')
 require('./email-outline')
-require('./fox-logo')
+require('./fox')
 require('./fx')
 require('./github-circle')
 require('./house')

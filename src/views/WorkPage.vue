@@ -1,19 +1,19 @@
 <template>
     <div class="work-page">
-        <Header/>
+        <ClientHeader/>
         <Client/>
     </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Header from '@/components/Header.vue'
+import ClientHeader from '@/components/ClientHeader.vue'
 import Client from '@/components/Client.vue'
 
 export default {
     name: 'work-page',
     components: {
-        Header,
+        ClientHeader,
         Client
     }
 }

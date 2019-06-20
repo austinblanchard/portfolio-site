@@ -22,7 +22,7 @@
 
                 <div class="logo">
                     <router-link :to="{ name: 'client', params: { clientSlug: 'fox' }}">
-                        <svgicon icon="fox-logo" />
+                        <svgicon icon="fox" />
                     </router-link>
                 </div>
                 <div class="logo">
