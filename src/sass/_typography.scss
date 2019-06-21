@@ -56,15 +56,10 @@ $neon: 'neon', serif;
 @mixin project-title() {
     font-family: $neon;
     text-transform: uppercase;
-    font-size: 26px;
     -webkit-font-smoothing: antialiased;
 
     color: #ffe4b9;
     text-shadow: 0 0 0 #fff3b9, 0 0 0 #fffcb9, 0 0 9px #ff6e00, 0 0 9px #dd6205, 0 0 4px #c12400, 0 0 1px #dd1905, 0 0 6px #dd4b05;
-
-    @include bp(2) {
-        font-size: 30px;
-    }
 }
 
 

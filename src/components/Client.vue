@@ -6,12 +6,23 @@
             <div class="project">
                 <div class="project-details">
                     <h2>Fox Movies</h2>
-                    <p>Services: Custom Themes</p>
+                    <p>Services: Custom Film Themes</p>
+                    <p>Tools: HTML/CSS, jQuery</p>
                 </div>
 
                 <div class="preview">
-                    <div class="preview-container">
+                    <!-- <div class="preview-container">
                         <img src="../assets/dark-phoenix-desktop.jpg" alt="">
+                    </div> -->
+
+                    <svgicon class="" icon="frame-laptop-phone" />
+                    
+                    <div class="desktop-wrapper">
+                        <img src="../assets/work/dark-phoenix-desktop.jpg" draggable="false" alt="">
+                    </div>
+
+                    <div class="mobile-wrapper">
+                        <img src="../assets/work/dark-phoenix-mobile.jpg" draggable="false" alt="">
                     </div>
                 </div>
             </div>
@@ -71,7 +82,7 @@ section {
     display: flex;
     flex-direction: column;
 
-    @include bp(2) {
+    @include bp(3) {
         flex-direction: row;
     }
 }
@@ -79,47 +90,109 @@ section {
 .project-details {
     width: 100%;
 
-    @include bp(2) {
+    @include bp(3) {
         width: 50%;
     }
 
     h2 {
         @include project-title();
+        text-align: center;
+        font-size: 26px;
+
+        @include bp(2) {
+            font-size: 30px;
+        }
+
+        @include bp(3) {
+            text-align: left;
+        }
     }
 
     p {
-        @include standard-font();
-        margin-top: $pad*2;
+        @include futura();
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-top: $pad;
         color: $white;
+        text-align: center;
+
+        @include bp(2) {
+            font-size: 14px;
+        }
+
+        @include bp(3) {
+            text-align: left;
+        }
+
+        &:first-of-type {
+            margin-top: $pad*2;
+        }
     }
 }
 
 .preview {
+    position: relative;
     width: 100%;
     margin-top: $pad*2;
 
-    @include bp(2) {
+    @include bp(3) {
         width: 50%;
         margin-top: 0;
     }
-}
 
-.preview-container {
-    width: 100%;
-    margin: 0 auto;
-    border: 1px solid $white;
-    overflow: hidden;
-    overflow-y: auto;
-    height: 250px;
+    svg {
+        position: relative;
+        color: $white;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
 
-    @include bp(2) {
-        height: 300px;
+    .desktop-wrapper {
+        position: absolute;
+        overflow-y: auto;
+        top: 5.8%;
+        height: 77.9%;
+        left: 10.7%;
+        width: 67.3%;
+    }
+
+    .mobile-wrapper {
+        position: absolute;
+        overflow-y: auto;
+        top: 32.2%;
+        height: 59.4%;
+        width: 19.2%;
+        left: 80.1%;
     }
 
     img {
         width: 100%;
+        position: absolute;
+        top: 0;
+        // cursor: url('../assets/scroll-icon.svg'),auto;
     }
 }
+
+
+
+// .preview-container {
+//     width: 100%;
+//     margin: 0 auto;
+//     border: 1px solid $white;
+//     overflow: hidden;
+//     overflow-y: auto;
+//     height: 250px;
+
+//     @include bp(2) {
+//         height: 300px;
+//     }
+
+//     img {
+//         width: 100%;
+//     }
+// }
 
 
 </style>

@@ -2,14 +2,14 @@
   <div id="app">
         <nav class="nav" :class="{ 'open': nav_is_open }">
             <div class="nav-socials" :class="{ 'light': lightIcons }">
-                <a href="https://www.linkedin.com/in/austinblanchard" target="_blank"><svgicon icon="linkedin" /></a>
-                <a href="https://github.com/austinblanchard" target="_blank"><svgicon icon="github-circle" /></a>
-                <a href="mailto:austinpdx@gmail.com" target="_blank"><svgicon class="email" icon="email-outline" /></a>
+                <a href="https://www.linkedin.com/in/austinblanchard" target="_blank" draggable="false"><svgicon icon="linkedin" /></a>
+                <a href="https://github.com/austinblanchard" target="_blank" draggable="false"><svgicon icon="github-circle" /></a>
+                <a href="mailto:austinpdx@gmail.com" target="_blank" draggable="false"><svgicon class="email" icon="email-outline" /></a>
             </div>
         </nav>
 
         <div class="sound" :class="{ 'light': lightIcons }" @click.prevent="audio.isPlaying ? pause(audio) : play(audio)" v-for="audio in audios" :key="audio.id">
-            <img src="./assets/victrola.png" alt="play music">
+            <img src="./assets/victrola.png" draggable="false" alt="play music">
             <div class="notes-wrapper" :class="{ 'playing': audio.isPlaying }">
                 <div class="note one">&#9834;</div>
                 <div class="note two">&#9834;</div>
@@ -18,8 +18,8 @@
         </div>
 
         <div class="menu" :class="{ 'on': nav_is_open }" @click="nav_is_open = !nav_is_open">
-            <img class="bone two" src="./assets/bone2.png" alt="">
-            <img class="bone one" src="./assets/bone.png" alt="">
+            <img class="bone two" src="./assets/bone2.png" draggable="false" alt="">
+            <img class="bone one" src="./assets/bone.png" draggable="false" alt="">
         </div>
 
 

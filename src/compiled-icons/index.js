@@ -2,6 +2,7 @@
 require('./dreamworks')
 require('./email-outline')
 require('./fox')
+require('./frame-laptop-phone')
 require('./fx')
 require('./github-circle')
 require('./house')

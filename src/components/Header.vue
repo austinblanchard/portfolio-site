@@ -9,18 +9,18 @@
 
             <div class="symbols">
                 <div class="symbol-wrapper">
-                    <img src="../assets/palm.png" alt="">
+                    <img src="../assets/palm.png" draggable="false" alt="">
                 </div>
 
                 <div class="symbol-wrapper">
                     <!-- <img src="../assets/giraffe.png" alt=""> -->
                     <!-- <img v-on:click="change" v-bind:src="'../assets/' + animals.image" alt=""> -->
-                    <img class="animal" @click="change" v-bind:src="array[n]"/>
+                    <img class="animal" draggable="false" @click="change" v-bind:src="array[n]"/>
                     <!-- <p @click="n++">{{array[n]}}</p> -->
                 </div>
 
                 <div class="symbol-wrapper">
-                    <img src="../assets/palm.png" alt="">
+                    <img src="../assets/palm.png" draggable="false" alt="">
                 </div>
             </div>
 
