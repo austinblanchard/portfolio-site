@@ -5,8 +5,10 @@
             <!-- add loop -->
             <div class="project">
                 <div class="project-details">
-                    <h2>Fox Movies</h2>
-                    <p>Services: Custom Film Themes</p>
+                    <a class="project-link" href="https://www.foxmovies.com/" target="_blank">
+                        <h2>Fox Movies</h2>
+                    </a>
+                    <p>Services: Custom Film Pages</p>
                     <p>Tools: HTML/CSS, jQuery</p>
                 </div>
 
@@ -82,16 +84,27 @@ section {
     display: flex;
     flex-direction: column;
 
-    @include bp(3) {
-        flex-direction: row;
-    }
+    // @include bp(3) {
+    //     flex-direction: row;
+    // }
 }
 
 .project-details {
     width: 100%;
 
-    @include bp(3) {
-        width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // @include bp(3) {
+    //     width: 50%;
+    // }
+
+    .project-link {
+        // 
+        // @include bp(3) {
+        //     display: inline-block;
+        // }
     }
 
     h2 {
@@ -100,12 +113,13 @@ section {
         font-size: 26px;
 
         @include bp(2) {
-            font-size: 30px;
+            font-size: 34px;
         }
 
-        @include bp(3) {
-            text-align: left;
-        }
+        // @include bp(3) {
+        //     text-align: left;
+        //     display: inline;
+        // }
     }
 
     p {
@@ -120,12 +134,16 @@ section {
             font-size: 14px;
         }
 
-        @include bp(3) {
-            text-align: left;
-        }
+        // @include bp(3) {
+        //     text-align: left;
+        // }
 
         &:first-of-type {
             margin-top: $pad*2;
+
+            @include bp(4) {
+                margin-top: $pad*3;
+            }
         }
     }
 }
@@ -135,9 +153,13 @@ section {
     width: 100%;
     margin-top: $pad*2;
 
-    @include bp(3) {
-        width: 50%;
-        margin-top: 0;
+    // @include bp(3) {
+    //     width: 50%;
+    //     margin-top: 0;
+    // }
+
+    @include bp(4) {
+        margin-top: $pad*3;
     }
 
     svg {
