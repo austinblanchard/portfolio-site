@@ -1,11 +1,23 @@
 @font-face {
-    font-family: 'futura';
-    src: url('/fonts/futura.ttf') format('truetype');
+    font-family: 'Futura';
+    src: url('~@/fonts/Futura-Bold.woff2') format('woff2'),
+        url('~@/fonts/Futura-Bold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'neon';
+    src: url('~@/fonts/NeonTubes2-Regular.woff2') format('woff2'),
+        url('~@/fonts/NeonTubes2-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 $futura: 'futura', Helvetica, sans-serif;
 $quicksand: 'Quicksand', sans-serif;
-// $neon: 'neon', serif;
+$neon: 'neon', serif;
 
 /** FONT MIXINS **/
 @mixin standard-font() {
@@ -19,15 +31,15 @@ $quicksand: 'Quicksand', sans-serif;
 @mixin futura() {
     font-family: $futura;
     font-style: normal;
-    font-weight: 600;
+    letter-spacing: 1px;
     -webkit-font-smoothing: antialiased;
 }
 
 @mixin title-font() {
     font-family: $futura;
     font-style: normal;
-    font-weight: 600;
-    // letter-spacing: 1px;
+    // font-weight: 600;
+    letter-spacing: 1px;
     text-transform: uppercase;
     -webkit-font-smoothing: antialiased;
     
@@ -42,10 +54,8 @@ $quicksand: 'Quicksand', sans-serif;
 }
 
 @mixin project-title() {
-    // font-family: $neon;
+    font-family: $neon;
     text-transform: uppercase;
-    font-style: normal;
-    // font-weight: 500;
     font-size: 26px;
     -webkit-font-smoothing: antialiased;
 

@@ -132,10 +132,6 @@ section {
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
-    // color: $black;
-    // color: $pink;
-    // text-transform: uppercase;
-    font-weight: 600;
     text-align: center;
     padding-bottom: $pad*2;
     font-size: 24px;

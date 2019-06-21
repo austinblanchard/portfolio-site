@@ -103,11 +103,8 @@ section {
 }
 
 .title {
-    // @include title-font();
     @include futura();
     color: $black;
-    // text-transform: uppercase;
-    font-weight: 600;
     text-align: center;
     padding-bottom: $pad*2;
     font-size: 22px;
