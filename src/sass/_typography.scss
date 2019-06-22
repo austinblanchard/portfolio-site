@@ -24,7 +24,7 @@ $neon: 'neon', serif;
     font-family: $quicksand;
     font-style: normal;
     font-weight: 500;
-    line-height: 17px;
+    line-height: 18px;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -58,12 +58,12 @@ $neon: 'neon', serif;
     text-transform: uppercase;
     -webkit-font-smoothing: antialiased;
 
-    color: #ffe4b9;
-    text-shadow: 0 0 0 #fff3b9, 0 0 0 #fffcb9, 0 0 9px #ff6e00, 0 0 9px #dd6205, 0 0 4px #c12400, 0 0 1px #dd1905, 0 0 6px #dd4b05;
+    // color: #ffe4b9;
+    // text-shadow: 0 0 0 #fff3b9, 0 0 0 #fffcb9, 0 0 9px #ff6e00, 0 0 9px #dd6205, 0 0 4px #c12400, 0 0 1px #dd1905, 0 0 6px #dd4b05;
 
-    &:hover {
-        text-shadow: 0 0 0 #fff3b9, 0 0 0 #fffcb9, 0 0 7px #ff6e00, 0 0 7px #dd6205, 0 0 7px #c12400, 0 0 7px #dd1905, 0 0 7px #dd4b05;
-    }
+    // &:hover {
+    //     text-shadow: 0 0 0 #fff3b9, 0 0 0 #fffcb9, 0 0 7px #ff6e00, 0 0 7px #dd6205, 0 0 7px #c12400, 0 0 7px #dd1905, 0 0 7px #dd4b05;
+    // }
 }
 
 

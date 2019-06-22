@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "project": "foxmovies",
+        "projectSlug": "fox",
+        "client": "fox",
+        "desktopImage": "dark-phoenix-desktop.jpg",
+        "mobileImage": "dark-phoenix-mobile.jpg"
+    },
+    {
+        "id": 2,
+        "project": "foxmovies",
+        "projectSlug": "fox",
+        "client": "fox",
+        "desktopImage": "dark-phoenix-desktop.jpg",
+        "mobileImage": "dark-phoenix-mobile.jpg"
+    }
+]

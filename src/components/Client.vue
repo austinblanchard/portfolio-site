@@ -13,9 +13,6 @@
                 </div>
 
                 <div class="preview">
-                    <!-- <div class="preview-container">
-                        <img src="../assets/dark-phoenix-desktop.jpg" alt="">
-                    </div> -->
 
                     <svgicon class="" icon="frame-laptop-phone" />
                     
@@ -26,6 +23,7 @@
                     <div class="mobile-wrapper">
                         <img src="../assets/work/dark-phoenix-mobile.jpg" draggable="false" alt="">
                     </div>
+
                 </div>
             </div>
             
@@ -40,13 +38,23 @@
 </template>
 
 <script>
-// import '../projects.json';
-export default {
-//   name: 'HelloWorld',
-//   props: {
-//     msg: String
-//   }
-}
+// import MY_JSON from '../projects.json'
+
+    export default {
+
+        //  myJson: MY_JSON
+        
+        // data() {
+
+        //     const projects = require('../projects.json').map(item => {
+        //         item.desktopImage = `../assets/work/${item.desktopImage}`;
+
+        //         return item;
+        //     });
+        // }
+    };
+
+    
 </script>
 
 <style lang="scss" scoped>
@@ -56,6 +64,28 @@ export default {
 @import "../sass/_typography.scss";
 @import "../sass/_buttons.scss";
 @import "../sass/_breakpoints.scss";
+
+@keyframes flicker {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+		opacity: .99;
+		text-shadow: 0 0 0 #fff3b9, 0 0 0 #fffcb9, 0 0 9px #ff6e00, 0 0 9px #dd6205, 0 0 4px #c12400, 0 0 1px #dd1905, 0 0 6px #dd4b05;
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+		text-shadow: none;
+	}
+}
+
+@keyframes flicker2 {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+		opacity: .99;
+		text-shadow: 0 0 0 #f8f8fa, 0 0 0 #f8f8fa, 0 0 6px #286296, 0 0 6px #1f65a5, 0 0 5px #1c5b94, 0 0 5px #1f629e, 0 0 5px #215f98;
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+		text-shadow: none;
+	}
+}
 
 section {
     padding: $pad*10 $pad*2;
@@ -87,6 +117,17 @@ section {
     // @include bp(3) {
     //     flex-direction: row;
     // }
+
+    &:nth-of-type(even) h2 {
+        color: #cbe7ef;
+
+        animation: flicker2 14s linear infinite;
+
+        &:hover {
+            text-shadow: 0 0 0 #f8f8fa, 0 0 0 #f8f8fa, 0 0 10px #286296, 0 0 10px #1f65a5, 0 0 10px #1c5b94, 0 0 10px #1f629e, 0 0 10px #215f98;
+            animation: none;
+        }
+    }
 }
 
 .project-details {
@@ -99,13 +140,6 @@ section {
     // @include bp(3) {
     //     width: 50%;
     // }
-
-    .project-link {
-        // 
-        // @include bp(3) {
-        //     display: inline-block;
-        // }
-    }
 
     h2 {
         @include project-title();
@@ -120,6 +154,14 @@ section {
         //     text-align: left;
         //     display: inline;
         // }
+
+        color: #ffe4b9;
+        animation: flicker 8s linear infinite;
+
+        &:hover {
+            text-shadow: 0 0 0 #fff3b9, 0 0 0 #fffcb9, 0 0 7px #ff6e00, 0 0 7px #dd6205, 0 0 7px #c12400, 0 0 7px #dd1905, 0 0 7px #dd4b05;
+            animation: none;
+        }
     }
 
     p {
@@ -196,25 +238,5 @@ section {
         // cursor: url('../assets/scroll-icon.svg'),auto;
     }
 }
-
-
-
-// .preview-container {
-//     width: 100%;
-//     margin: 0 auto;
-//     border: 1px solid $white;
-//     overflow: hidden;
-//     overflow-y: auto;
-//     height: 250px;
-
-//     @include bp(2) {
-//         height: 300px;
-//     }
-
-//     img {
-//         width: 100%;
-//     }
-// }
-
 
 </style>
