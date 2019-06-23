@@ -6,18 +6,6 @@
 
         <div class="container">
 
-            <!-- <swiper :options="swiperOption" ref="mySwiper" @someSwiperEvent="callback">
-                <swiper-slide class="item">
-                    <img src="../assets/lafh.png" alt="">
-                    <p class="work-title">LA Family<br>Housing</p>
-                </swiper-slide>
-                <swiper-slide class="item">
-                    <img src="https://via.placeholder.com/200x150" alt="">
-                    <p class="work-title">title</p>
-                </swiper-slide>
-                <div class="swiper-pagination"  slot="pagination"></div>
-            </swiper> -->
-
             <div class="logos-container">
 
                 <div class="logo">
@@ -26,11 +14,15 @@
                     </router-link>
                 </div>
                 <div class="logo">
-                    <svgicon class="universal" icon="universal" />
+                    <router-link draggable="false" :to="{ name: 'client', params: { clientSlug: 'lafh' }}">
+                        <svgicon class="lafh" icon="house" />
+                    </router-link>
                 </div>
 
                 <div class="logo">
-                    <svgicon class="dreamworks" icon="dreamworks" />
+                    <router-link draggable="false" :to="{ name: 'client', params: { clientSlug: 'dreamworks' }}">
+                        <svgicon class="dreamworks" icon="dreamworks" />
+                    </router-link>
                 </div>
                 <div class="logo">
                     <svgicon class="paramount" icon="paramount" />
@@ -44,45 +36,15 @@
                 </div>
 
                 <!-- <div class="logo">
-                    <svgicon class="lafh" icon="house" />
+                    <svgicon class="universal" icon="universal" />
                 </div> -->
 
-
             </div>
-
-            
 
         </div>
     </section>
     
 </template>
-
-<script>
-// import '../compiled-icons';
-
-// import 'swiper/dist/css/swiper.css'
-// import { swiper, swiperSlide } from 'vue-awesome-swiper'
-
-
-
-export default {
-    // components: {
-    //     swiper,
-    //     swiperSlide
-    // },
-
-    data() {
-      return {
-        // swiperOption: {
-        //   loop: true,
-        //   centeredSlides: true,
-        //     slidesPerView: 1,
-        //     spaceBetween: 40,
-        // }
-      }
-    },
-}
-</script>
 
 <style lang="scss" scoped>
 @import "../sass/resets/_company.scss";
@@ -97,10 +59,6 @@ section {
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
-
-    // background: url('../assets/stars.jpg');
-    // background-position: center;
-    // background-repeat: repeat;
 
     padding: $pad*10 $pad*2;
 

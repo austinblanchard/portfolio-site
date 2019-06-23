@@ -1,18 +1,48 @@
 [
     {
         "id": 1,
-        "project": "foxmovies",
-        "projectSlug": "fox",
-        "client": "fox",
-        "desktopImage": "dark-phoenix-desktop.jpg",
-        "mobileImage": "dark-phoenix-mobile.jpg"
+        "client": "Fox",
+        "projects": [
+            {
+                "title": "Fox Movies",
+                "projectSlug": "fox",
+                "desktopImage": "dark-phoenix-desktop.jpg",
+                "mobileImage": "dark-phoenix-mobile.jpg"
+            },
+            {
+                "title": "Stuber Screenings",
+                "projectSlug": "stuber-screenings",
+                "desktopImage": "stuber-desktop.jpg",
+                "mobileImage": "stuber-mobile.jpg"
+            }
+        ]
     },
     {
         "id": 2,
-        "project": "foxmovies",
-        "projectSlug": "fox",
-        "client": "fox",
-        "desktopImage": "dark-phoenix-desktop.jpg",
-        "mobileImage": "dark-phoenix-mobile.jpg"
+        "client": "LAFH",
+        "projects": [
+            {
+                "title": "LAFH",
+                "projectSlug": "lafh",
+                "desktopImage": "lafh-desktop.jpg",
+                "mobileImage": "lafh-mobile.jpg"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "client": "DreamWorks",
+        "projects": [
+            {
+                "title": "DreamWorks",
+                "projectSlug": "dreamworks",
+                "desktopImage": "dreamworks-desktop.jpg",
+                "mobileImage": "dreamworks-mobile.jpg"
+            }
+        ]
     }
 ]
+
+
+
+

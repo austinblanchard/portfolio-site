@@ -15,21 +15,19 @@
                 <div class="preview">
 
                     <svgicon class="" icon="frame-laptop-phone" />
-                    
+                    <!-- screen capture desktop sites at 1300px, squoosh at 60 quality, reduce to 1500px wide -->
                     <div class="desktop-wrapper">
-                        <img src="../assets/work/dark-phoenix-desktop.jpg" draggable="false" alt="">
+                        <img src="../assets/work/stuber-desktop.jpg" draggable="false" alt="">
                     </div>
-
+                    <!-- screen capture mobile sites at iphone 6 , squoosh at 52 quality, reduce to 500px wide -->
                     <div class="mobile-wrapper">
-                        <img src="../assets/work/dark-phoenix-mobile.jpg" draggable="false" alt="">
+                        <img src="../assets/work/lafh-mobile.jpg" draggable="false" alt="">
                     </div>
 
                 </div>
             </div>
             
         </div>
-
-
 
         <!-- <p>text {{ $route.params.clientSlug }}</p> -->
         <!-- <img src="{{ $route.params.desktopImage }}" alt=""> -->
@@ -42,16 +40,7 @@
 
     export default {
 
-        //  myJson: MY_JSON
         
-        // data() {
-
-        //     const projects = require('../projects.json').map(item => {
-        //         item.desktopImage = `../assets/work/${item.desktopImage}`;
-
-        //         return item;
-        //     });
-        // }
     };
 
     
