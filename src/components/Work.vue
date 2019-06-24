@@ -10,7 +10,7 @@
 
                 <div class="logo">
                     <router-link draggable="false" :to="{ name: 'client', params: { clientSlug: 'fox' }}">
-                        <svgicon icon="fox" />
+                        <svgicon class="fox" icon="fox" />
                     </router-link>
                 </div>
                 <div class="logo">
@@ -157,8 +157,12 @@ section {
 
             color: $white;
 
+            &.fox{
+                width: 37%;
+            }
+
             &.lafh {
-                width: 26%;
+                width: 25%;
                 fill: none;
                 stroke: $white;
             }
