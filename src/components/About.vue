@@ -1,7 +1,7 @@
 <template>
     <section id="about">
-        <img class="frame top" src="../assets/frame-top.png" alt="">
-        <img class="frame bottom" src="../assets/frame-top.png" alt="">
+        <img class="frame top" draggable="false" src="../assets/frame-top.png" alt="">
+        <img class="frame bottom" draggable="false" src="../assets/frame-top.png" alt="">
         <div class="container">
             <h2 class="title">
                 Story

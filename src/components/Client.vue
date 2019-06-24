@@ -3,10 +3,10 @@
 
         <div class="container">
             <!-- add loop -->
-            <div class="project">
+            <div class="project" v-for="project in client.projects">
                 <div class="project-details">
                     <a class="project-link" href="https://www.foxmovies.com/" target="_blank">
-                        <h2>Fox Movies</h2>
+                        <h2>{{ project.title }}</h2>
                     </a>
                     <p>Services: Custom Film Pages</p>
                     <p>Tools: HTML/CSS, jQuery</p>
@@ -36,13 +36,15 @@
 </template>
 
 <script>
-// import MY_JSON from '../projects.json'
+import clients from '../projects.json';
 
-    export default {
-
-        
-    };
-
+export default {
+    data() {
+        return {
+            client: clients.find(client => client.slug === this.$route.params.clientSlug)
+        };
+    }
+};
     
 </script>
 
@@ -106,6 +108,10 @@ section {
     // @include bp(3) {
     //     flex-direction: row;
     // }
+
+    &:not(:first-of-type) {
+        margin-top: $pad*8;
+    }
 
     &:nth-of-type(even) h2 {
         color: #cbe7ef;

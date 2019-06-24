@@ -30,5 +30,8 @@ export default new Router({
       // component: Projects
       component: () => import(/* webpackChunkName: "client" */ './views/WorkPage.vue')
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })

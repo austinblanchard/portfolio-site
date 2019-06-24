@@ -2,6 +2,7 @@
     {
         "id": 1,
         "client": "Fox",
+        "slug": "fox",
         "projects": [
             {
                 "title": "Fox Movies",
@@ -20,6 +21,7 @@
     {
         "id": 2,
         "client": "LAFH",
+        "slug": "lafh",
         "projects": [
             {
                 "title": "LAFH",
@@ -32,6 +34,7 @@
     {
         "id": 3,
         "client": "DreamWorks",
+        "slug": "dreamworks",
         "projects": [
             {
                 "title": "DreamWorks",
@@ -42,7 +45,3 @@
         ]
     }
 ]
-
-
-
-
