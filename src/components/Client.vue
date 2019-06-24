@@ -17,11 +17,11 @@
                     <svgicon class="" icon="frame-laptop-phone" />
                     <!-- screen capture desktop sites at 1300px, squoosh at 60 quality, reduce to 1500px wide -->
                     <div class="desktop-wrapper">
-                        <img src="../assets/work/stuber-desktop.jpg" draggable="false" alt="">
+                        <img :src="getImgUrl(project.desktopImage)" draggable="false" alt="">
                     </div>
                     <!-- screen capture mobile sites at iphone 6 , squoosh at 52 quality, reduce to 500px wide -->
                     <div class="mobile-wrapper">
-                        <img src="../assets/work/lafh-mobile.jpg" draggable="false" alt="">
+                        <img :src="getImgUrl(project.mobileImage)" draggable="false" alt="">
                     </div>
 
                 </div>
@@ -43,6 +43,12 @@ export default {
         return {
             client: clients.find(client => client.slug === this.$route.params.clientSlug)
         };
+    },
+    
+    methods: {
+        getImgUrl(imagePath) {
+            return require('../assets/work/'+imagePath)
+        }
     }
 };
     
