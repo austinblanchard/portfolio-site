@@ -5,11 +5,11 @@
             <!-- add loop -->
             <div class="project" v-for="project in client.projects">
                 <div class="project-details">
-                    <a class="project-link" href="https://www.foxmovies.com/" target="_blank">
+                    <a class="project-link" :href="project.url" target="_blank">
                         <h2>{{ project.title }}</h2>
                     </a>
-                    <p>Services: Custom Film Pages</p>
-                    <p>Tools: HTML/CSS, jQuery</p>
+                    <p>Services: {{ project.services }}</p>
+                    <p>Tools: {{ project.tools }}</p>
                 </div>
 
                 <div class="preview">

@@ -7,12 +7,18 @@
             {
                 "title": "Fox Movies",
                 "projectSlug": "fox",
+                "url": "https://www.foxmovies.com/",
+                "services": "Custom Film Pages",
+                "tools": "HTML/CSS, jQuery",
                 "desktopImage": "dark-phoenix-desktop.jpg",
                 "mobileImage": "dark-phoenix-mobile.jpg"
             },
             {
                 "title": "Stuber Screenings",
                 "projectSlug": "stuber-screenings",
+                "url": "http://www.stuberscreenings.com/",
+                "services": "Custom Film Pages",
+                "tools": "HTML/CSS, jQuery",
                 "desktopImage": "stuber-desktop.jpg",
                 "mobileImage": "stuber-mobile.jpg"
             }
@@ -26,6 +32,9 @@
             {
                 "title": "LAFH",
                 "projectSlug": "lafh",
+                "url": "http://share.lafh.org/",
+                "services": "Custom Film Pages",
+                "tools": "HTML/CSS, jQuery",
                 "desktopImage": "lafh-desktop.jpg",
                 "mobileImage": "lafh-mobile.jpg"
             }
@@ -39,6 +48,9 @@
             {
                 "title": "DreamWorks",
                 "projectSlug": "dreamworks",
+                "url": "https://www.dreamworks.com/",
+                "services": "Custom Film Pages",
+                "tools": "HTML/CSS, jQuery",
                 "desktopImage": "dreamworks-desktop.jpg",
                 "mobileImage": "dreamworks-mobile.jpg"
             }
