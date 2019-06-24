@@ -9,9 +9,9 @@
 
             <p class="copy">Hello. To get to the long and short of it, my name is Austin, and I like to make good-looking and fun-to-use things on the web. I didn’t start here, far from it. I studied language, traveled the world a bit, made some lifelong friends, and eventually found my way back to learning a new skill. I suppose the first thing that attracted me to web development was building out a little world, a space that looked and behaved the way I imagined. But as I learned more about the tools available to me, my mind began to wander and I realized the possibilities were nearly endless…</p>
 
-            <p class="copy page-copy" :class="{ 'show': showText }">More text.</p>
+            <!-- <p class="copy page-copy" :class="{ 'show': showText }">More text.</p> -->
 
-            <router-link class="link" :class="{ 'hidden': hideLink }" to="/about">More</router-link> 
+            <!-- <router-link class="link" :class="{ 'hidden': hideLink }" to="/about">More</router-link>  -->
         </div>
     </section>
     

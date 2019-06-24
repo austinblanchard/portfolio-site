@@ -5,11 +5,13 @@
             <!-- add loop -->
             <div class="project" v-for="project in client.projects">
                 <div class="project-details">
-                    <a class="project-link" :href="project.url" target="_blank">
+                    <a class="project-link" v-if="project.url" :href="project.url" target="_blank">
                         <h2>{{ project.title }}</h2>
                     </a>
-                    <p>Services: {{ project.services }}</p>
-                    <p>Tools: {{ project.tools }}</p>
+                    <h2 v-else>{{ project.title }}</h2>
+                    <p>{{ project.services }}</p>
+                    <!-- <span class="divider"></span> -->
+                    <p>{{ project.tools }}</p>
                 </div>
 
                 <div class="preview">
@@ -87,7 +89,8 @@ export default {
 section {
     padding: $pad*10 $pad*2;
 
-    background: url('../assets/wall.jpg');
+    background: #140000;
+    // background: url('../assets/wall.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

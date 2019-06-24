@@ -9,7 +9,7 @@
                 "projectSlug": "fox",
                 "url": "https://www.foxmovies.com/",
                 "services": "Custom Film Pages",
-                "tools": "HTML/CSS, jQuery",
+                "tools": "HTML/Sass, JavaScript, jQuery",
                 "desktopImage": "dark-phoenix-desktop.jpg",
                 "mobileImage": "dark-phoenix-mobile.jpg"
             },
@@ -17,10 +17,19 @@
                 "title": "Stuber Screenings",
                 "projectSlug": "stuber-screenings",
                 "url": "http://www.stuberscreenings.com/",
-                "services": "Custom Film Pages",
-                "tools": "HTML/CSS, jQuery",
+                "services": "Dynamic screenings map",
+                "tools": "VueJS, GreenSock",
                 "desktopImage": "stuber-desktop.jpg",
                 "mobileImage": "stuber-mobile.jpg"
+            },
+            {
+                "title": "Deadpool Core",
+                "projectSlug": "deadpool-core",
+                "url": "http://www.deadpoolcore.com/",
+                "services": "Deadpool promotions",
+                "tools": "HTML/Sass, JavaScript",
+                "desktopImage": "deadpoolcore-desktop.jpg",
+                "mobileImage": "deadpoolcore-mobile.jpg"
             }
         ]
     },
@@ -33,8 +42,8 @@
                 "title": "LAFH",
                 "projectSlug": "lafh",
                 "url": "http://share.lafh.org/",
-                "services": "Custom Film Pages",
-                "tools": "HTML/CSS, jQuery",
+                "services": "A hub for share images",
+                "tools": "VueJS, GreenSock",
                 "desktopImage": "lafh-desktop.jpg",
                 "mobileImage": "lafh-mobile.jpg"
             }
@@ -49,10 +58,58 @@
                 "title": "DreamWorks",
                 "projectSlug": "dreamworks",
                 "url": "https://www.dreamworks.com/",
-                "services": "Custom Film Pages",
-                "tools": "HTML/CSS, jQuery",
+                "services": "DreamWorks studio website",
+                "tools": "HTML/Sass, JavaScript, Laravel",
                 "desktopImage": "dreamworks-desktop.jpg",
                 "mobileImage": "dreamworks-mobile.jpg"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "client": "FX",
+        "slug": "fx",
+        "projects": [
+            {
+                "title": "AHS",
+                "projectSlug": "ahs",
+                "url": "https://thebeginningisnear.tv/",
+                "services": "Animated Contest Signup",
+                "tools": "VueJS, Sass",
+                "desktopImage": "ahs-desktop.jpg",
+                "mobileImage": "ahs-mobile.jpg"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "client": "Paramount",
+        "slug": "paramount",
+        "projects": [
+            {
+                "title": "Paramount Emails",
+                "projectSlug": "paramount",
+                "url": "",
+                "services": "Mailing list of +200k",
+                "tools": "HTML/CSS",
+                "desktopImage": "bumblebee-desktop.jpg",
+                "mobileImage": "bumblebee-mobile.jpg"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "client": "PXL",
+        "slug": "pxl",
+        "projects": [
+            {
+                "title": "PXL Agency Website",
+                "projectSlug": "pxl",
+                "url": "https://www.pxlagency.com/",
+                "services": "Agency Portfolio",
+                "tools": "Ember, HTML/Sass, JavaScript",
+                "desktopImage": "pxl-desktop.jpg",
+                "mobileImage": "pxl-mobile.jpg"
             }
         ]
     }

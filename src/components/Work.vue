@@ -14,25 +14,31 @@
                     </router-link>
                 </div>
                 <div class="logo">
-                    <router-link draggable="false" :to="{ name: 'client', params: { clientSlug: 'lafh' }}">
-                        <svgicon class="lafh" icon="house" />
-                    </router-link>
-                </div>
-
-                <div class="logo">
                     <router-link draggable="false" :to="{ name: 'client', params: { clientSlug: 'dreamworks' }}">
                         <svgicon class="dreamworks" icon="dreamworks" />
                     </router-link>
                 </div>
+
                 <div class="logo">
-                    <svgicon class="paramount" icon="paramount" />
+                    <router-link draggable="false" :to="{ name: 'client', params: { clientSlug: 'lafh' }}">
+                        <svgicon class="lafh" icon="house" />
+                    </router-link>
+                </div>
+                <div class="logo">
+                    <router-link draggable="false" :to="{ name: 'client', params: { clientSlug: 'paramount' }}">
+                        <svgicon class="paramount" icon="paramount" />
+                    </router-link>
                 </div>
 
                 <div class="logo">
-                    <svgicon class="fx" icon="fx" />
+                    <router-link draggable="false" :to="{ name: 'client', params: { clientSlug: 'fx' }}">
+                        <svgicon class="fx" icon="fx" />
+                    </router-link>
                 </div>
                 <div class="logo">
-                    <svgicon class="pxl" icon="pxl" />
+                    <router-link draggable="false" :to="{ name: 'client', params: { clientSlug: 'pxl' }}">
+                        <svgicon class="pxl" icon="pxl" />
+                    </router-link>
                 </div>
 
                 <!-- <div class="logo">
@@ -141,6 +147,9 @@ section {
         // height: 100px;
         padding: $pad*2 0;
         text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         svg {
             width: 40%;
