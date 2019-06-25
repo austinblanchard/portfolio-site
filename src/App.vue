@@ -34,10 +34,8 @@
 <script>
 import './compiled-icons'
 import Home from './views/Home.vue'
-// import Header from './components/Header.vue'
-// import About from './components/About.vue'
-// import Work from './components/Work.vue'
-// import Contact from './components/Contact.vue'
+
+import { mapActions } from 'vuex'
 
 export default {
     name: 'app',
@@ -65,6 +63,11 @@ export default {
     },
 
     methods: {
+        ...mapActions([
+            // Mounts the "loadImages" action to `this.loadImages()`.
+            'loadImages',
+        ]),
+
         play (audio) {
             audio.isPlaying = true;
             audio.file.play();
@@ -79,10 +82,6 @@ export default {
             this.lightIcons = bool;
         }
     },
-
-    // created: function() {
-    // 	alert('Hello');
-    // },
 
 }
 </script>
