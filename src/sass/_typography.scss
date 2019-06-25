@@ -15,9 +15,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'tilda';
+    src: url('~@/fonts/Tilda-Grande.woff2') format('woff2'),
+        url('~@/fonts/Tilda-Grande.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $futura: 'futura', Helvetica, sans-serif;
 $quicksand: 'Quicksand', sans-serif;
 $neon: 'neon', serif;
+$tilda: 'tilda', 'futura', serif;
 
 /** FONT MIXINS **/
 @mixin standard-font() {
@@ -51,6 +60,12 @@ $neon: 'neon', serif;
 
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@mixin about-title() {
+    font-family: $tilda;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
 }
 
 @mixin project-title() {

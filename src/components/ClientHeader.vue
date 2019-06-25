@@ -12,9 +12,15 @@
 </template>
 
 <script>
-// import { TimelineLite } from 'gsap'
+// import clients from '../projects.json';
 
 export default {
+
+    // data() {
+    //     return {
+    //         client: clients.find(client => client.slug === this.$route.params.clientSlug)
+    //     };
+    // },
 
     mounted() {
         var getUrlParameter = function getUrlParameter(sParam) {
@@ -149,9 +155,9 @@ header {
 
 .sky {
     // original sky styles
-    // background: url('../assets/download.jpg');
+    // background: url('../assets/art.jpg');
     // background-size: cover;
-    // background-position: center bottom;
+    // background-position: center;
     // background-repeat: no-repeat;
 
     // css from codepen

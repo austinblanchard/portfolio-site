@@ -157,6 +157,12 @@ section {
 
             color: $white;
 
+            transition: all 200ms ease;
+
+            &:hover {
+                transform: scale(1.03);
+            }
+
             &.fox{
                 width: 37%;
             }
