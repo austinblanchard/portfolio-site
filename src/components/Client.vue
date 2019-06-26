@@ -221,7 +221,7 @@ section {
         position: absolute;
         overflow-y: auto;
         top: 5.8%;
-        height: 77.5%;
+        height: 77.7%;
         left: 10.7%;
         width: 67.3%;
 
