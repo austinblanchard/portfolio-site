@@ -9,34 +9,34 @@
             <div class="logos-container">
 
                 <div class="logo">
-                    <router-link draggable="false" :to="{ name: 'client', params: { clientSlug: 'fox' }}">
+                    <router-link class="link fox" draggable="false" :to="{ name: 'client', params: { clientSlug: 'fox' }}">
                         <svgicon class="fox" icon="fox" />
                     </router-link>
                 </div>
                 <div class="logo">
-                    <router-link draggable="false" :to="{ name: 'client', params: { clientSlug: 'dreamworks' }}">
+                    <router-link class="link" draggable="false" :to="{ name: 'client', params: { clientSlug: 'dreamworks' }}">
                         <svgicon class="dreamworks" icon="dreamworks" />
                     </router-link>
                 </div>
 
                 <div class="logo">
-                    <router-link draggable="false" :to="{ name: 'client', params: { clientSlug: 'lafh' }}">
+                    <router-link class="link lafh" draggable="false" :to="{ name: 'client', params: { clientSlug: 'lafh' }}">
                         <svgicon class="lafh" icon="lafh" />
                     </router-link>
                 </div>
                 <div class="logo">
-                    <router-link draggable="false" :to="{ name: 'client', params: { clientSlug: 'paramount' }}">
+                    <router-link class="link paramount" draggable="false" :to="{ name: 'client', params: { clientSlug: 'paramount' }}">
                         <svgicon class="paramount" icon="paramount" />
                     </router-link>
                 </div>
 
                 <div class="logo">
-                    <router-link draggable="false" :to="{ name: 'client', params: { clientSlug: 'fx' }}">
+                    <router-link class="link fx" draggable="false" :to="{ name: 'client', params: { clientSlug: 'fx' }}">
                         <svgicon class="fx" icon="fx" />
                     </router-link>
                 </div>
                 <div class="logo">
-                    <router-link draggable="false" :to="{ name: 'client', params: { clientSlug: 'pxl' }}">
+                    <router-link class="link pxl" draggable="false" :to="{ name: 'client', params: { clientSlug: 'pxl' }}">
                         <svgicon class="pxl" icon="pxl" />
                     </router-link>
                 </div>
@@ -143,16 +143,47 @@ section {
     // box-shadow: 0px 0px 40px 0px rgba(60,59,57,.75);
 
     .logo {
-        width: 50%;
-        // height: 100px;
+        width: 34%;
+        margin: 0 auto;
         padding: $pad*2 0;
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
 
+        @include bp(1) {
+            padding: $pad*2 $pad;
+        }
+
+        @include bp(2) {
+            padding: $pad*2 $pad*2;
+        }
+
+        .link {
+            // 
+            &.fox {
+                width: 76%;
+            }
+
+            &.lafh {
+                width: 56%;
+            }
+
+            &.paramount {
+                width: 80%;
+            }
+
+            &.fx {
+                width: 80%;
+            }
+
+            &.pxl {
+                width: 90%;
+            }
+        }
+
         svg {
-            width: 40%;
+            width: 100%;
             height: 100%;
 
             color: $white;
@@ -160,25 +191,12 @@ section {
             transition: all 200ms ease;
 
             &:hover {
-                transform: scale(1.03);
-            }
-
-            &.fox{
-                width: 37%;
+                transform: scale(1.02);
             }
 
             &.lafh {
-                width: 25%;
                 fill: none;
                 stroke: $white;
-            }
-
-            &.universal {
-                width: 57%;
-            }
-
-            &.dreamworks {
-                width: 54%;
             }
         }
     }
