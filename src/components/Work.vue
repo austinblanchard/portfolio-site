@@ -162,11 +162,11 @@ section {
         .link {
             // 
             &.fox {
-                width: 76%;
+                width: 72%;
             }
 
             &.lafh {
-                width: 56%;
+                width: 50%;
             }
 
             &.paramount {
