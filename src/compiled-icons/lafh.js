@@ -1,7 +1,7 @@
 /* eslint-disable */
 var icon = require('vue-svgicon')
 icon.register({
-  'house': {
+  'lafh': {
     width: 16,
     height: 16,
     viewBox: '0 0 699.2 1000',

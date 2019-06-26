@@ -21,7 +21,7 @@
 
                 <div class="logo">
                     <router-link draggable="false" :to="{ name: 'client', params: { clientSlug: 'lafh' }}">
-                        <svgicon class="lafh" icon="house" />
+                        <svgicon class="lafh" icon="lafh" />
                     </router-link>
                 </div>
                 <div class="logo">

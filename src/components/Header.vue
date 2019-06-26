@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="sky" :class="{ 'about-page': pageChange }" ref="sky"></div>
-        <div class="title-wrapper">
+        <div class="title-wrapper" :class="{ 'about-page': pageChange }">
             <h1 class="title" v-if="!pageChange">
                 Austin Blanchard
             </h1>
@@ -103,7 +103,7 @@ header {
         background-position: center bottom;
         background-repeat: no-repeat;
 
-        @include bp(4) {
+        @include bp(3) {
             background-position: center 80%;
         }
     }
@@ -116,6 +116,14 @@ header {
 
     @include bp(3) {
         padding: $pad*15 0;
+    }
+
+    &.about-page {
+        // 
+
+        @include bp(4) {
+            padding: $pad*18 0;
+        }
     }
 }
 

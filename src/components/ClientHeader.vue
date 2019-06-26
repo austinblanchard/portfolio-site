@@ -3,8 +3,8 @@
         <!-- <div class="sky" ref="sky"></div> -->
         <canvas class="sky" id="field" />
         <div class="title-wrapper">
-            <div class="logo">
-                <svgicon class="fox" icon="fox" />
+            <div class="logo" :class="client.slug">
+                <svgicon :class="client.slug" :icon="client.slug" />
             </div>
         </div>
         
@@ -12,15 +12,15 @@
 </template>
 
 <script>
-// import clients from '../projects.json';
+import clients from '../projects.json';
 
 export default {
 
-    // data() {
-    //     return {
-    //         client: clients.find(client => client.slug === this.$route.params.clientSlug)
-    //     };
-    // },
+    data() {
+        return {
+            client: clients.find(client => client.slug === this.$route.params.clientSlug)
+        };
+    },
 
     mounted() {
         var getUrlParameter = function getUrlParameter(sParam) {
@@ -200,13 +200,36 @@ header {
         width: 150px;
     }
 
+    &.dreamworks {
+        width: 140px;
+
+        @include bp(3) {
+            width: 170px;
+        }
+    }
+
+    &.lafh {
+        width: 86px;
+    }
+
+    &.pxl {
+        width: 120px;
+
+        @include bp(3) {
+            width: 160px;
+        }
+    }
+
     svg {
         width: 100%;
         height: 100%;
 
         color: $white;
 
-    
+        &.lafh {
+            fill: none;
+            stroke: $white;
+        }
     }
 }
 
