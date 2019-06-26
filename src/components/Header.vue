@@ -1,13 +1,16 @@
 <template>
     <header>
-        <div class="sky" ref="sky"></div>
-        <div class="title-wrapper">
-            <h1 class="title">
+        <div class="sky" :class="{ 'about-page': pageChange }" ref="sky"></div>
+        <div class="title-wrapper" :class="{ 'about-page': pageChange }">
+            <h1 class="title" v-if="!pageChange">
                 Austin Blanchard
             </h1>
-            <div class="subtitle">Creative Web Developer</div>
+            <h1 class="about-title" v-else>
+                Story
+            </h1>
+            <div class="subtitle" :class="{ 'about-page': pageChange }">Creative Web Developer</div>
 
-            <div class="symbols">
+            <div class="symbols" :class="{ 'about-page': pageChange }">
                 <div class="symbol-wrapper">
                     <img src="../assets/palm.png" draggable="false" alt="">
                 </div>
@@ -34,8 +37,14 @@
 
 export default {
 
-    // initial animal change
+    props: {
+        pageChange: {
+            type: Boolean,
+            default: false
+        }
+    },
 
+    // animal change
     data() {
         return {
             n: 0,
@@ -87,6 +96,17 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
+
+    &.about-page {
+        background: url('../assets/art.jpg');
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+
+        @include bp(3) {
+            background-position: center 80%;
+        }
+    }
 }
 
 .title-wrapper {
@@ -96,6 +116,14 @@ header {
 
     @include bp(3) {
         padding: $pad*15 0;
+    }
+
+    &.about-page {
+        // 
+
+        @include bp(4) {
+            padding: $pad*18 0;
+        }
     }
 }
 
@@ -108,12 +136,26 @@ header {
     }
 }
 
+.about-title {
+    @include about-title();
+    color: $white;
+    font-size: 70px;
+
+    @include bp(3) {
+        font-size: 100px;
+    }
+}
+
 .subtitle {
     position: relative;
     margin-top: $pad;
     // color: white;
     color: $black;
     font-weight: 700;
+
+    &.about-page {
+        display: none;
+    }
 }
 
 .symbols {
@@ -121,6 +163,10 @@ header {
     display: flex;
     justify-content: center;
     margin-top: $pad;
+
+    &.about-page {
+        display: none;
+    }
 }
 
 .symbol-wrapper {
@@ -137,6 +183,11 @@ header {
 
 .animal {
     cursor: pointer;
+    transition: all 200ms ease;
+
+    &:hover {
+        transform: scale(1.02);
+    }
 
     // img {
     //     transition: all 1s ease;

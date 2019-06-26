@@ -94,6 +94,10 @@ export default {
 @import "./sass/_buttons.scss";
 @import "./sass/_breakpoints.scss";
 
+html {
+    background-color: #000;
+}
+
 #app {
     font-family: $quicksand;
     font-style: normal;

@@ -3,6 +3,7 @@
         "id": 1,
         "client": "Fox",
         "slug": "fox",
+        "svg": "fox",
         "projects": [
             {
                 "title": "Fox Movies",
@@ -37,6 +38,7 @@
         "id": 2,
         "client": "LAFH",
         "slug": "lafh",
+        "svg": "house",
         "projects": [
             {
                 "title": "LAFH",
@@ -53,6 +55,7 @@
         "id": 3,
         "client": "DreamWorks",
         "slug": "dreamworks",
+        "svg": "dreamworks",
         "projects": [
             {
                 "title": "DreamWorks",
@@ -69,6 +72,7 @@
         "id": 4,
         "client": "FX",
         "slug": "fx",
+        "svg": "fx",
         "projects": [
             {
                 "title": "AHS",
@@ -85,6 +89,7 @@
         "id": 5,
         "client": "Paramount",
         "slug": "paramount",
+        "svg": "paramount",
         "projects": [
             {
                 "title": "Paramount Emails",
@@ -101,6 +106,7 @@
         "id": 6,
         "client": "PXL",
         "slug": "pxl",
+        "svg": "pxl",
         "projects": [
             {
                 "title": "PXL Agency Website",
