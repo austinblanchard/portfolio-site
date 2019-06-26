@@ -22,11 +22,6 @@
             <img class="bone one" src="./assets/bone.png" draggable="false" alt="">
         </div>
 
-
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
     <router-view @message="setIcons" />
   </div>
 </template>
@@ -34,17 +29,10 @@
 <script>
 import './compiled-icons'
 import Home from './views/Home.vue'
-
-import { mapActions } from 'vuex'
+// import { mapActions } from 'vuex'
 
 export default {
     name: 'app',
-    // components: {
-    //     Header,
-    //     About,
-    //     Work,
-    //     Contact
-    // },
 
     data() {
         return {
@@ -63,10 +51,9 @@ export default {
     },
 
     methods: {
-        ...mapActions([
-            // Mounts the "loadImages" action to `this.loadImages()`.
-            'loadImages',
-        ]),
+        // ...mapActions([
+        //     'loadImages',
+        // ]),
 
         play (audio) {
             audio.isPlaying = true;
@@ -124,7 +111,6 @@ html {
 
     &.open {
         top: 0;
-        // box-shadow: 0px 13px 49px 2px rgba(128,128,128,1);
     }
 }
 
@@ -343,34 +329,6 @@ html {
             }
         }
     }
-}
-
-[v-cloak] > * { display: none; }
-[v-cloak]::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 1;
-    width: 150px;
-    height: 150px;
-    margin: -75px 0 0 -75px;
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
-}
-@-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
 }
 
 </style>

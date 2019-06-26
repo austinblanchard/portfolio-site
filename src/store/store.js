@@ -24,8 +24,8 @@ export const store = new Vuex.Store({
             // Preload images and set counter
             const imagePromises = [];
             const imagesToLoad = [
-                // 'frame-top.png',
                 'bone.png',
+                // 'frame-top.png',
                 // 'cheetah.png',
                 // 'giraffe.png',
                 // 'rhino.png',
@@ -35,8 +35,6 @@ export const store = new Vuex.Store({
                 // 'underwater.jpg'
             ];
             let percentageDone = 0;
-
-            console.log('hi');
 
             for (let i = 0; i < imagesToLoad.length; i++) {
                 imagePromises.push(new Promise((resolve, reject)=> {
