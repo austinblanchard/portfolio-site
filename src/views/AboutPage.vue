@@ -9,12 +9,23 @@
 // @ is an alias to /src
 import Header from '@/components/Header.vue'
 import About from '@/components/About.vue'
+import { mapActions } from 'vuex'
 
 export default {
     name: 'about-page',
     components: {
         Header,
         About
+    },
+
+    methods: {
+        ...mapActions([
+            'loadAboutImages',
+        ]),
+    },
+
+    beforeMount() {
+        this.loadAboutImages();
     }
 }
 

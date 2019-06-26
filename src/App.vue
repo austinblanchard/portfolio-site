@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+        <div class="loader" :class="{ 'loading': this.$store.state.isLoadingImages }">loading....</div>
         <nav class="nav" :class="{ 'open': nav_is_open }">
             <div class="nav-socials" :class="{ 'light': lightIcons }">
                 <a href="https://www.linkedin.com/in/austinblanchard" target="_blank" draggable="false"><svgicon icon="linkedin" /></a>
@@ -22,14 +23,14 @@
             <img class="bone one" src="./assets/bone.png" draggable="false" alt="">
         </div>
 
-    <router-view @message="setIcons" />
+        <router-view @message="setIcons" />
   </div>
 </template>
 
 <script>
 import './compiled-icons'
 import Home from './views/Home.vue'
-// import { mapActions } from 'vuex'
+import { mapActions } from 'vuex'
 
 export default {
     name: 'app',
@@ -43,7 +44,7 @@ export default {
                 {
                     id: 'fats',
                     name: 'song',
-                    file: new Audio(require('./assets/audio/fats.mp3')),
+                    file: new Audio(require('./assets/fats.mp3')),
                     isPlaying: false
                 },
             ]
@@ -51,10 +52,6 @@ export default {
     },
 
     methods: {
-        // ...mapActions([
-        //     'loadImages',
-        // ]),
-
         play (audio) {
             audio.isPlaying = true;
             audio.file.play();
@@ -68,8 +65,7 @@ export default {
         setIcons(bool) {
             this.lightIcons = bool;
         }
-    },
-
+    }
 }
 </script>
 
@@ -85,7 +81,27 @@ html {
     background-color: #000;
 }
 
+.loader {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    font-size: 40px;
+    color: white;
+    background: #000;
+    display: none;
+
+    &.loading {
+        display: block;
+    }
+}
+
 #app {
+    position: relative;
     font-family: $quicksand;
     font-style: normal;
     font-weight: 500;

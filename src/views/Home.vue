@@ -13,6 +13,7 @@ import Header from '@/components/Header.vue'
 import About from '@/components/About.vue'
 import Work from '@/components/Work.vue'
 import Contact from '@/components/Contact.vue'
+import { mapActions } from 'vuex'
 
 
 export default {
@@ -25,12 +26,16 @@ export default {
     },
 
     methods: {
+        ...mapActions([
+            'loadHomeImages',
+        ]),
         changeIcons() {
             this.$emit("message", false);
         }
     },
 
     beforeMount() {
+        this.loadHomeImages();
         this.changeIcons();
     }
 }
