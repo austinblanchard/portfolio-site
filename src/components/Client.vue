@@ -212,7 +212,7 @@ section {
         position: relative;
         color: $white;
         width: 100%;
-        height: 100%;
+        height: auto;
         z-index: 1;
         pointer-events: none;
     }
@@ -224,6 +224,10 @@ section {
         height: 77.9%;
         left: 10.7%;
         width: 67.3%;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     .mobile-wrapper {
@@ -233,6 +237,10 @@ section {
         height: 59.4%;
         width: 19.2%;
         left: 80.1%;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     img {
