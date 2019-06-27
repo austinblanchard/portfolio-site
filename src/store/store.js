@@ -21,6 +21,7 @@ export const store = new Vuex.Store({
 
     actions: {
         async loadHomeImages(context) {
+            context.commit('setLoadingCount', 0);
             context.commit('setIsLoadingImages', true);
             // Preload images and set counter
             const imagePromises = [];
@@ -65,6 +66,7 @@ export const store = new Vuex.Store({
         },
 
         async loadAboutImages(context) {
+            context.commit('setLoadingCount', 0);
             context.commit('setIsLoadingImages', true);
             // Preload images and set counter
             const imagePromises = [];
