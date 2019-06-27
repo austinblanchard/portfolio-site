@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
     state: {
-        isLoadingImages: true,
+        // maybe change back to true once work page loader is working?
+        isLoadingImages: false,
         loadingCount: 0
     },
 
@@ -106,46 +107,46 @@ export const store = new Vuex.Store({
             });
         },
 
-        // async loadWorkImages(context) {
-        //     // Preload images and set counter
-        //     const imagePromises = [];
-        //     // active project(s)
-        //     const imagesToLoad = [
-        //         // 'frame-top.png',
-        //         // 'art.jpg',
-        //         // 'sand.jpg'
-        //     ];
-        //     let percentageDone = 0;
+        async loadWorkImages(context) {
+            // Preload images and set counter
+            const imagePromises = [];
+            // active project(s)
+            const imagesToLoad = [
+                // 'frame-top.png',
+                // 'art.jpg',
+                // 'sand.jpg'
+            ];
+            let percentageDone = 0;
 
-        //     for (let i = 0; i < imagesToLoad.length; i++) {
-        //         imagePromises.push(new Promise((resolve, reject)=> {
-        //             const image = new Image();
-        //             image.src = require('../assets/work' + imagesToLoad[i]);
+            for (let i = 0; i < imagesToLoad.length; i++) {
+                imagePromises.push(new Promise((resolve, reject)=> {
+                    const image = new Image();
+                    image.src = require('../assets/work' + imagesToLoad[i]);
 
-        //             image.onload = ()=> {
-        //                 percentageDone += 1;
-        //                 // i guess this will need to be dynamic too for pages with more than 1 project?
-        //                 let tempCount = Math.floor((percentageDone * 100)/1);
+                    image.onload = ()=> {
+                        percentageDone += 1;
+                        // i guess this will need to be dynamic too for pages with more than 1 project?
+                        let tempCount = Math.floor((percentageDone * 100)/1);
 
-        //                 context.commit('setLoadingCount', tempCount);
+                        context.commit('setLoadingCount', tempCount);
 
-        //                 resolve();
-        //             }
+                        resolve();
+                    }
 
-        //             image.onerror = (error)=> {
-        //                 console.log('image reject', error);
-        //                 context.commit('setLoadingCount', percentageDone);
-        //                 reject();
-        //             }
-        //         }));
-		// 	}
+                    image.onerror = (error)=> {
+                        console.log('image reject', error);
+                        context.commit('setLoadingCount', percentageDone);
+                        reject();
+                    }
+                }));
+			}
 
-        //     Promise.all(imagePromises).then(()=> {
-        //         setTimeout(()=> {
-        //             context.commit('setIsLoadingImages', false);
-        //         }, 1000);
-        //     });
-        // }
+            Promise.all(imagePromises).then(()=> {
+                setTimeout(()=> {
+                    context.commit('setIsLoadingImages', false);
+                }, 1000);
+            });
+        }
 
     }
 })

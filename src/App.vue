@@ -116,11 +116,16 @@ html {
     .loader {
         position: relative;
 
-        width: 200px;
-
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        width: 200px;
+        margin-bottom: $pad*6;
+
+        @include bp(1) {
+            margin-bottom: 0;
+        }
     }
 
     .loader-bar-container {
