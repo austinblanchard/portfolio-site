@@ -76,7 +76,7 @@ export default {
     },
 
     mounted() {
-        import('./assets/fats.mp3');
+        this.preload = new Audio(require('./assets/fats.mp3'));
     }
 }
 </script>

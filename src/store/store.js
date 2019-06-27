@@ -27,11 +27,12 @@ export const store = new Vuex.Store({
             // Preload images and set counter
             const imagePromises = [];
             const imagesToLoad = [
+                'sky.jpg',
                 'frame-top.png',
                 'cheetah.png',
                 'giraffe.png',
                 'rhino.png',
-                'jungle.jpg',
+                // 'jungle.jpg',
                 'about.jpg',
                 'underwater.jpg'
             ];
