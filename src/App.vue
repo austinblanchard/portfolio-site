@@ -98,7 +98,7 @@ html {
     z-index: 100;    
     background: #000;
     
-    // display: none;
+    display: none;
 
     &.loading {
         display: block;
