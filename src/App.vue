@@ -17,7 +17,7 @@
             </div>
         </nav>
 
-        <div class="sound" :class="{ 'light': lightIcons }" @click.prevent="audio.isPlaying ? pause(audio) : play(audio)" v-for="audio in audios" :key="audio.id">
+        <div class="sound" ref="audio" :class="{ 'light': lightIcons }" @click.prevent="audio.isPlaying ? pause(audio) : play(audio)" v-for="audio in audios" :key="audio.id">
             <img src="./assets/victrola.png" draggable="false" alt="play music">
             <div class="notes-wrapper" :class="{ 'playing': audio.isPlaying }">
                 <div class="note one">&#9834;</div>
@@ -73,6 +73,10 @@ export default {
         setIcons(bool) {
             this.lightIcons = bool;
         }
+    },
+
+    mounted() {
+        import('./assets/fats.mp3');
     }
 }
 </script>
