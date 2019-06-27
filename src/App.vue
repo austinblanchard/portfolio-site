@@ -3,7 +3,9 @@
         <div class="loader-bg" :class="{ 'loading': this.$store.state.isLoadingImages }">
             <div class="loader-wrapper">
                 <div class="loader">
-                    loading....
+                    <div class="loader-bar-container">
+                        <div class="loader-bar" v-bind:style="{ left: this.$store.state.loadingCount + '%' }"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,8 +114,33 @@ html {
     }
 
     .loader {
-        color: white;
-        font-size: 40px;
+        position: relative;
+
+        width: 200px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .loader-bar-container {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        border-radius: 25px;
+        border: 2px solid $white;
+        background: $white;
+
+        .loader-bar {
+            position: absolute;
+            background: #000;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            // what does this transition do?
+            transition: left .2s;
+        }
     }
 }
 
