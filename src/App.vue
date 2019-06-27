@@ -98,7 +98,7 @@ html {
     z-index: 100;    
     background: #000;
     
-    display: none;
+    // display: none;
 
     &.loading {
         display: block;
@@ -129,8 +129,9 @@ html {
         width: 100%;
         height: 10px;
         border-radius: 25px;
-        border: 2px solid $white;
-        background: $white;
+        border: 2px solid #cbe7ef;
+        background: #d6e6ea;
+        box-shadow: 0 0 0 #215c92, 0 0 0 #215c92, 0 0 9px #215c92, 0 0 9px #215c92, 0 0 9px #215c92, 0 0 9px #215c92, 0 0 9px #215c92;
 
         .loader-bar {
             position: absolute;
@@ -138,6 +139,7 @@ html {
             right: 0;
             top: 0;
             bottom: 0;
+            border-radius: 25px;
             // what does this transition do?
             transition: left .2s;
         }
