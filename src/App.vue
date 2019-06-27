@@ -1,6 +1,12 @@
 <template>
-  <div id="app">
-        <div class="loader" :class="{ 'loading': this.$store.state.isLoadingImages }">loading....</div>
+  <div id="app" :class="{ 'loading': this.$store.state.isLoadingImages }">
+        <div class="loader-bg" :class="{ 'loading': this.$store.state.isLoadingImages }">
+            <div class="loader-wrapper">
+                <div class="loader">
+                    loading....
+                </div>
+            </div>
+        </div>
         <nav class="nav" :class="{ 'open': nav_is_open }">
             <div class="nav-socials" :class="{ 'light': lightIcons }">
                 <a href="https://www.linkedin.com/in/austinblanchard" target="_blank" draggable="false"><svgicon icon="linkedin" /></a>
@@ -81,22 +87,33 @@ html {
     background-color: #000;
 }
 
-.loader {
+.loader-bg {
     position: absolute;
-    height: 100%;
-    width: 100%;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 100;
-    font-size: 40px;
-    color: white;
+    z-index: 100;    
     background: #000;
+    
     display: none;
 
     &.loading {
         display: block;
+    }
+
+    .loader-wrapper {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .loader {
+        color: white;
+        font-size: 40px;
     }
 }
 
@@ -106,6 +123,12 @@ html {
     font-style: normal;
     font-weight: 500;
     -webkit-font-smoothing: antialiased;
+
+    &.loading {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+    }
 }
 
 .nav {
