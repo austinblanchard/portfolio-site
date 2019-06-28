@@ -74,10 +74,6 @@ export default {
             this.lightIcons = bool;
         }
     },
-
-    mounted() {
-        this.preload = new Audio(require('./assets/fats.mp3'));
-    }
 }
 </script>
 

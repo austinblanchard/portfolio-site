@@ -109,20 +109,20 @@ export const store = new Vuex.Store({
         },
 
         async loadWorkImages(context) {
-            // Preload images and set counter
+            context.commit('setLoadingCount', 0);
+            context.commit('setIsLoadingImages', true);
+            
             const imagePromises = [];
-            // active project(s)
             const imagesToLoad = [
-                // 'frame-top.png',
-                // 'art.jpg',
-                // 'sand.jpg'
+                // need to load current project(s) here
+                'pxl-desktop.jpg',
             ];
             let percentageDone = 0;
 
             for (let i = 0; i < imagesToLoad.length; i++) {
                 imagePromises.push(new Promise((resolve, reject)=> {
                     const image = new Image();
-                    image.src = require('../assets/work' + imagesToLoad[i]);
+                    image.src = require('../assets/work/' + imagesToLoad[i]);
 
                     image.onload = ()=> {
                         percentageDone += 1;
