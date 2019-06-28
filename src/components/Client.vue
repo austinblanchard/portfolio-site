@@ -31,6 +31,10 @@
             
         </div>
 
+        <div class="link-wrapper">
+            <router-link class="link" to="/">Back</router-link> 
+        </div>
+
         <!-- <p>text {{ $route.params.clientSlug }}</p> -->
         <!-- <img src="{{ $route.params.desktopImage }}" alt=""> -->
     </section>
@@ -248,6 +252,32 @@ section {
         position: absolute;
         top: 0;
         // cursor: url('../assets/scroll-icon.svg'),auto;
+    }
+}
+
+.link-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: $pad*4;
+
+    @include bp(3) {
+        margin-top: $pad*6;
+    }
+}
+
+.link {
+    @include standard-button();
+    display: inline-block;
+    color: $white;
+
+    &:after {
+        position: absolute;
+        content: '';
+        height: 2px;
+        border-radius: 25px;
+        border: 2px solid #cbe7ef;
+        background: #d6e6ea;
+        box-shadow: 0 0 0 #215c92, 0 0 0 #215c92, 0 0 9px #215c92, 0 0 9px #215c92, 0 0 9px #215c92, 0 0 9px #215c92, 0 0 9px #215c92;
     }
 }
 
