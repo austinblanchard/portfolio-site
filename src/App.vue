@@ -60,6 +60,14 @@ export default {
     },
 
     methods: {
+        // preloadAudio(url) {
+        //     var audio = new Audio();
+        //     // once this file loads, it will call loadedAudio()
+        //     // the file will be kept by the browser as cache
+        //     audio.addEventListener('canplaythrough', loadedAudio, false);
+        //     audio.src = url;
+        // },
+
         play (audio) {
             audio.isPlaying = true;
             audio.file.play();
@@ -74,6 +82,16 @@ export default {
             this.lightIcons = bool;
         }
     },
+
+    mounted() {
+        const preload = new Audio(require('./assets/fats.mp3'));
+        preload.load();
+        // preloadAudio();
+
+        // const { audio } = this.$refs;
+        // audio.addEventListener('canplaythrough', isAppLoaded, false);
+        // audio.load();
+    }
 }
 </script>
 
